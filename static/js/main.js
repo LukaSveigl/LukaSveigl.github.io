@@ -21,7 +21,18 @@ const initLocalStorage = () => {
 
     const currentTheme = localStorage.getItem("theme");
     if (currentTheme === null) {
-        localStorage.setItem("theme", "light");
+        // Check if theme is set as a GET parameter in the URL.
+        const url = new URL(window.location.href);
+        const theme = url.searchParams.get("theme");
+
+        console.log("url: " + url);
+        console.log("theme: " + theme);
+
+        if (theme === "dark") {
+            localStorage.setItem("theme", "dark");
+        } else {
+            localStorage.setItem("theme", "light");
+        }
     }
 }
 
@@ -74,6 +85,16 @@ function toggleTheme() {
         const bubble = $(".bubble");
         bubble.css("box-shadow", "5px 5px 10px rgba(255, 255, 255, 0.2)");
 
+        // Set the theme as a GET parameter in the URL.
+        for (const a of $("nav").children("a")) {
+            const href = a.href;
+            const url = new URL(href);
+            url.searchParams.set("theme", "dark");
+            a.href = url.href;
+
+            console.log("a.href: " + a.href);
+        }
+
     } else {
         localStorage.setItem("theme", "light");
 
@@ -96,5 +117,15 @@ function toggleTheme() {
 
         const bubble = $(".bubble");
         bubble.css("box-shadow", "5px 5px 10px rgba(0, 0, 0, 0.2)");
+
+        // Set the theme as a GET parameter in the URL.
+        for (const a of $("nav").children("a")) {
+            const href = a.href;
+            const url = new URL(href);
+            url.searchParams.delete("theme");
+            a.href = url.href;
+
+            console.log("a.href: " + a.href);
+        }
     }
 }
