@@ -34,6 +34,9 @@ const initEventListeners = () => {
     $("#theme-toggle").on("click", toggleTheme);
 }
 
+/**
+ * Initialize the bootstrap elements.
+ */
 const initBootstrapElements = () => {
     const navbar = new bootstrap.Collapse(document.getElementById("navbarNav"));
 }
