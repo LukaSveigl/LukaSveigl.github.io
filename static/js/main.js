@@ -1,8 +1,6 @@
 /// <reference path="https://code.jquery.com/jquery-3.6.0.min.js" />
 
 $(function() {
-    console.log("main.js loaded");
-
     // Initialize local storage.
     initLocalStorage();
 
@@ -14,19 +12,25 @@ $(function() {
 });
 
 /**
+ * Map of the project names to their respective GitHub repositories.
+ *
+ * @type {{JPINS: string, MythVM: string, MythC: string}}
+ */
+const indexHighlightsToURLs = {
+    "JPINS-bubble": "https://github.com/LukaSveigl/PINS-JavaBytecode-Compiler",
+    "MythC-bubble": "https://github.com/LukaSveigl/Myth-Compiler",
+    "MythVM-bubble": "https://github.com/LukaSveigl/Myth-VM",
+}
+
+/**
  * Initialize the local storage.
  */
 const initLocalStorage = () => {
-    console.log("initLocalStorage() called");
-
     const currentTheme = localStorage.getItem("theme");
     if (currentTheme === null) {
         // Check if theme is set as a GET parameter in the URL.
         const url = new URL(window.location.href);
         const theme = url.searchParams.get("theme");
-
-        console.log("url: " + url);
-        console.log("theme: " + theme);
 
         if (theme === "dark") {
             localStorage.setItem("theme", "dark");
@@ -40,13 +44,25 @@ const initLocalStorage = () => {
  * Initialize the event listeners.
  */
 const initEventListeners = () => {
-    console.log("initEventListeners() called");
-
     $("#theme-toggle").on("click", toggleTheme);
+
+    initIndexHighlightEventListeners();
 }
 
 /**
- * Initialize the bootstrap elements.
+ * Initialize the event listeners for the index highlights.
+ */
+const initIndexHighlightEventListeners = () => {
+    for (const highlightId in indexHighlightsToURLs) {
+        const highlight = $("#" + highlightId);
+        highlight.on("click", () => {
+            window.location.href = indexHighlightsToURLs[highlightId];
+        });
+    }
+}
+
+/**
+ * Initialize the bootstrap elements, such as the navbar on mobile devices.
  */
 const initBootstrapElements = () => {
     const navbar = new bootstrap.Collapse(document.getElementById("navbarNav"));

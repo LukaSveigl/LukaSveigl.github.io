@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luka Šveigl's personal page.">
+    <meta name="author" content="Luka Šveigl">
+
+    <!-- Bootstrap 5.0.2 CSS. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="../static/css/main.css" rel="stylesheet" type="text/css">
+
+    <title>Home</title>
+</head>
+<body>
+    <!-- Header. -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <header>
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <a class="navbar-brand" href="../index.html">Luka Šveigl</a>
+                        <!-- Navbar toggle button - used on mobile devices. -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pages/contact.html">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Portfolio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pages/resume.html">Resume</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pages/blogs.html">Blogs</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Theme toggle button. -->
+                        <button id="theme-toggle" class="btn btn-primary">Toggle Theme</button>
+                    </nav>
+                </header>
+            </div>
+        </div>
+    </div>
+
+    <!-- Body. -->
+    <div class="container-fluid colorful-bg">
+        <div class="container d-flex flex-column align-content-center">
+            <h1 class="display-4">Portfolio</h1>
+            <p class="lead">Check out some of my "best" projects.</p>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <h2 class="text-center">Projects</h2><hr>
+        <!-- List of projects, split into two columns -->
+        <div class="row">
+            <div class="col-6">
+                <p><b>The Myth Compiler:</b> A compiler for a toy programming language called Myth, written in Rust.
+                    Available at:
+                    <a href="https://github.com/LukaSveigl/Myth-Compiler">https://github.com/LukaSveigl/Myth-Compiler</a></p>
+            </div>
+            <div class="col-6">
+                <p><b>The Myth VM:</b> A virtual machine that executes programs compiled by the Myth compiler, written in C++.
+                    Available at: <a href="https://github.com/LukaSveigl/Myth-VM">https://github.com/LukaSveigl/Myth-VM</a></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p><b>JPINS:</b> An upgrade to the PINS compiler I implemented during my undergrad studies, that compiles PINS
+                    to Java bytecode. Available at:
+                    <a href="https://github.com/LukaSveigl/PINS-JavaBytecode-Compiler">https://github.com/LukaSveigl/PINS-JavaBytecode-Compiler</a></p>
+            </div>
+            <div class="col-6">
+                <p><b>SFL:</b> An implementation of a simple parcel company information system, complete with a website,
+                    desktop app and mobile app, which was a group project during undergrad studies for our software
+                    engineering course. Available at:
+                    <a href="https://github.com/LukaSveigl/SFL-TPO">https://github.com/LukaSveigl/SFL-TPO</a></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p><b>Slovenia's energetics analysis:</b> Analysis of the energetics situation of Slovenia. Available at:
+                    <a href="https://github.com/LukaSveigl/Energetics-analysis-in-Slovenia">https://github.com/LukaSveigl/Energetics-analysis-in-Slovenia</a></p>
+            </div>
+            <div class="col-6">
+                <p><b>Dank Tank Trouble:</b> A 3D tank shooter game implemented in WebGL. Available at:
+                    <a href="https://github.com/LukaSveigl/Dank-Tank-Trouble">https://github.com/LukaSveigl/Dank-Tank-Trouble</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer. -->
+    <footer class="bg-light text-dark">
+        <div class="container-fluid py-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 Luka Šveigl</p>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.0.2 JS. -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Custom JS. -->
+    <script src="../static/js/main.js"></script>
+</body>
+</html>
