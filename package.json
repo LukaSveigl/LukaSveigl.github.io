@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "deploy": "ng build --base-href=/LukaSveigl.github.io/ && npx angular-cli-ghpages --dir=dist/LukaSveigl.github.io/browser"
+    "deploy": "ng build --base-href=/ && npx angular-cli-ghpages --dir=dist/LukaSveigl.github.io/browser"
   },
   "private": true,
   "packageManager": "npm@11.14.1",
