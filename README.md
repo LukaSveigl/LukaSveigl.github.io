@@ -1,59 +1,105 @@
-# LukaSveiglGithubIo
+# Personal Website
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.11.
+A minimal, mobile-first personal website and technical portfolio built with Angular.
 
-## Development server
+This site serves as a central hub for my projects, writeups, and technical background, with a focus on compilers, programming languages, virtual machines, and systems programming.
 
-To start a local development server, run:
+---
+
+## Features
+
+- Minimal, documentation-style layout inspired by technical references
+- Responsive design (desktop + mobile)
+- Dark / light theme support
+- Sidebar navigation with project links
+- Project showcase with GitHub and live demos
+- Writeups section for technical articles and deep dives
+- Clean, readable typography optimized for long-form technical content
+- Modular Angular component architecture
+- Deployed via GitHub Pages
+
+---
+
+## Tech Stack
+
+- Angular (standalone components)
+- Angular Router
+- Angular Material (for UI primitives)
+- TypeScript
+- SCSS
+- GitHub Pages hosting
+
+---
+
+## Content Sections
+
+### Home
+A short introduction and featured projects.
+
+### Projects
+A curated list of systems, language, and engineering projects including:
+
+- Compilers and programming languages work
+- Virtual machines and emulators (e.g. CHIP-8)
+- Systems programming libraries in C
+- Web and full-stack projects
+
+### Writeups
+Technical articles and notes covering topics such as:
+
+- Compilers and type systems
+- Language design and implementation
+- Low-level systems programming
+- Experimental and academic projects
+
+### About
+A concise overview of my background, interests, and current work in programming languages and systems.
+
+---
+
+## Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run locally:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+Open:
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
+
+## Deployment (GitHub Pages)
+
+Build for production:
 
 ```bash
-ng generate --help
+ng build --base-href /LukaSveigl.github.io/
 ```
 
-## Building
+Then generated files are inside:
 
-To build the project run:
-
-```bash
-ng build
+```
+dist/
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Deploy the contents to GitHub Pages.
 
-## Running unit tests
+---
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Future Improvements
 
-```bash
-ng test
-```
+- Add more projects and writeups over time
+- Implement a search feature for projects and articles
+- Add a contact form or social media links
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
