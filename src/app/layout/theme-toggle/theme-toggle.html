@@ -1,0 +1,10 @@
+<button
+    class="theme-button"
+    (click)="themeService.toggleTheme()"
+>
+    @if (themeService.lightMode()) {
+        Light Mode
+    } @else {
+        Dark Mode
+    }
+</button>

@@ -1,0 +1,35 @@
+<aside class="sidebar">
+    <div class="sidebar-header">
+        <h1>LukaSveigl</h1>
+
+        <p>
+            Compilers, PLs, VMs,
+            and systems programming.
+        </p>
+    </div>
+
+    <nav class="nav-links">
+        <a routerLink="/">Home</a>
+        <a routerLink="/projects">Projects</a>
+        <a routerLink="/writeups">Writeups</a>
+        <a routerLink="/about">About</a>
+    </nav>
+
+    <section class="external-links">
+        <h3>Projects</h3>
+
+        @for (project of liveProjects; track project.title) {
+            <a [href]="project.liveUrl" target="_blank">
+                {{ project.title }}
+            </a>
+        }
+
+        <a href="https://github.com/LukaSveigl" target="_blank">
+            GitHub
+        </a>
+
+    </section>
+
+    <app-theme-toggle />
+</aside>
+

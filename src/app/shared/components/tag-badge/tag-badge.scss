@@ -1,0 +1,23 @@
+/*.tag {
+  padding:
+          0.25rem 0.75rem;
+
+  border-radius: 999px;
+
+  background:
+          var(--surface-elevated);
+
+  border:
+          1px solid var(--border-color);
+
+  font-size: 0.875rem;
+}*/
+
+.tag {
+  background: var(--surface-elevated);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+}

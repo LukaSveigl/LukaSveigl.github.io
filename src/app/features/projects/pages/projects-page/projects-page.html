@@ -1,0 +1,11 @@
+<app-content-wrapper>
+    <h1>Projects</h1>
+
+    <div class="projects-grid">
+        @for (project of projects; track project) {
+            <app-project-card
+                [project]="project"
+            />
+        }
+    </div>
+</app-content-wrapper>

@@ -1,0 +1,27 @@
+<article class="project-card">
+    <h2>
+        {{ project().title }}
+    </h2>
+
+    <p>
+        {{ project().description }}
+    </p>
+
+    <div class="tags">
+        @for (tech of project().technologies; track tech) {
+            <app-tag-badge
+                [label]="tech"
+            />
+        }
+    </div>
+
+    <div class="links">
+        @if (project().githubUrl) {
+            <a [href]="project().githubUrl" target="_blank">GitHub</a>
+        }
+
+        @if(project().liveUrl) {
+            <a [href]="project().liveUrl" target="_blank">Live Demo</a>
+        }
+    </div>
+</article>

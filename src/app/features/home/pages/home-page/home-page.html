@@ -1,0 +1,25 @@
+<app-content-wrapper>
+    <section class="hero">
+        <h1>
+            LukaSveigl
+        </h1>
+
+        <p>
+            Software engineer focused on programming languages, compilers, virtual machines and system programming.
+        </p>
+    </section>
+
+    <section>
+        <h2>
+            Featured Projects
+        </h2>
+
+        <div class="projects-grid">
+            @for (project of featuredProjects; track project) {
+                <app-project-card
+                    [project]="project"
+                />
+            }
+        </div>
+    </section>
+</app-content-wrapper>

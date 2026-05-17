@@ -1,0 +1,57 @@
+<mat-sidenav-container class="layout-container">
+
+    <mat-sidenav
+        #drawer
+        class="mobile-sidenav"
+        mode="over"
+        [opened]="mobileMenuOpen()"
+        (closedStart)="mobileMenuOpen.set(false)"
+    >
+
+        <app-sidebar-nav />
+
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+
+        <header class="mobile-header">
+
+            <button
+                    mat-icon-button
+                    (click)="toggleMenu()"
+            >
+                <mat-icon>
+                    menu
+                </mat-icon>
+            </button>
+
+            <span>
+        Lukas V.
+      </span>
+
+        </header>
+
+        <div class="desktop-layout">
+
+            <aside class="desktop-sidebar">
+                <app-sidebar-nav />
+            </aside>
+
+            <main class="content">
+                <router-outlet />
+            </main>
+
+        </div>
+
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+<!--<div class="layout">
+    <app-sidebar-nav />
+
+    <main class="content">
+         <router-outlet />
+    </main>
+</div>
+-->
